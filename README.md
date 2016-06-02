@@ -1,10 +1,9 @@
 # tiger-geodatabase-oregon
 Census Bureau TIGER Geodatabase for Oregon
+Source: [TIGER/Line® with Selected Demographic and Economic Data](https://www.census.gov/geo/maps-data/data/tiger-data.html)
 
-1. Install QGIS and PostGIS.
-2. Create a PostgreSQL user with database creation capability and a personal database with the same name. The user will need to have an encrypted password. For example, on my workstation the user name is 'znmeb' and the personal database is also 'znmeb'.
-3. Go into PgAdmin3 and add the PostGIS extension to that user's database.
-4. Download the Oregon database from <https://www.census.gov/geo/maps-data/data/tiger-geodatabases.html>
-5. Open QGIS. Go to the "Browser" panel and right-click on "PostGIS". Select "New Connection". In the form you'll need to fill in the name, the database name ("znmeb" in my case), the user name ("znmeb" again) and the password. This won't work with a passwordless login.
+1. Install PostGIS and GDAL.
+2. Connect to PostgreSQL with PgAdmin3. Create a database "acs_oregon". Then add the PostGIS extension to that database.
+3. Download the Oregon database from <https://www.census.gov/geo/maps-data/data/tiger-geodatabases.html>. It's a ZIP archive called `ACS_2014_5YR_BG_41.gdb.zip`.
 
-    Press "Test Connection". It should come back with "Connection to <database name> was successful". Press the 'OK' button to dismiss the test dialog and 'OK' again to set up the connection.
+To be continued ...
