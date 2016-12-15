@@ -9,3 +9,6 @@ createdb acs_oregon
 psql -d acs_oregon -c "CREATE EXTENSION postgis;"
 ogr2ogr -f PostgreSQL -overwrite -skipfailures \
   PG:dbname=acs_oregon ACS_2014_5YR_BG_41.gdb.zip
+
+## Dump database
+pg_dump -f ACS_2014_5YR_BG_41.sql -d acs_oregon
